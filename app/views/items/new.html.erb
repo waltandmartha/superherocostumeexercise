@@ -1,0 +1,39 @@
+<h1>new item</h1>
+
+
+<form action="/items" method="post">
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    
+    
+    <p>
+    <label for="label">Item Name: </label>
+    <input required type="text" name="label">
+    </p>
+
+    <p>
+    <label for="description">Description: </label>
+    <textarea required name="description"  cols="30" rows="10"></textarea>
+    </p>
+
+    <p>
+    <label for="price">Price: </label>
+    <input required name= "price" type="number" min="0.01" step="0.01" max="1000.01">
+    </p>
+
+    <p>
+        <label for="item_type">Item Type</label>
+        <select required name="item_type" >
+            <option></option>
+            <option value="1">Capes</option>
+            <option value="2">Lycra</option>
+            <option value="3">Masks</option>
+            <option value="4">Hat</option>
+        </select>
+    </p>
+
+    <p>
+    <input type="submit" value="Create Item">
+    </p>
+
+</form>
